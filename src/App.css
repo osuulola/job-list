@@ -1,0 +1,17 @@
+span{
+max-height: 15px;
+}
+body{
+  background: lightblue;
+}
+.card1{
+  background-color: whitesmoke;
+  align-items: center;
+  padding: 10px 0;
+  border-left: blue 5px;
+  border-radius: 20px;
+}
+nav{
+  height: 100px;
+  background:yellowgreen;
+}
