@@ -1,20 +1,22 @@
-import React,{useState} from 'react';
-import {useHistory} from 'react-router-dom';
+import React, {useState} from 'react';
 
-function Login() {
+function Signup() {
     const [email, setEmail] = useState("")
     const [password, setPassword] = useState("")
-    const history = useHistory();
+    const [name, setName] = useState('')
 
    const handleSubmit = (e) =>{
-       e.preventDefault();
-        
-        history.push('/dashboard');
+       e.preventDefault()
        console.log(email, password);
    }
+
     return (
-        <div className='container'>
+        <div>
             <form>
+            <div className=" form-group">
+                <label htmlFor="exampleInputEmail1">Full Name</label>
+                <input type="text" className="form-control" value={name} onChange={e=>setName(e.target.value)}/>
+            </div>
             <div className=" form-group">
                 <label htmlFor="exampleInputEmail1">Email address</label>
                 <input type="email" className="form-control" value={email} onChange={e=>setEmail(e.target.value)}/>
@@ -30,9 +32,8 @@ function Login() {
             </div>
             <button type="submit" className="btn btn-primary"onClick={handleSubmit}>Submit</button>
             </form>
-
         </div>
     )
 }
 
-export default Login
+export default Signup
