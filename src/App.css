@@ -15,3 +15,6 @@ nav{
   height: 100px;
   background:yellowgreen;
 }
+li{
+  list-style: none;
+}

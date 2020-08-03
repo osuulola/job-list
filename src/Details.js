@@ -1,12 +1,14 @@
 import React from 'react';
+import {Link} from 'react-router-dom';
 
 function Details(props) {
     
     const job =  props.location.state.job;
-    console.log(job);
+    
     
     return (
-        <div className='container card1 my-4' style={{alignItems:'center'}}>
+        <div className='container card1 my-4 text-center'>
+            <Link to={{pathname:'/dashboard'}}>Back</Link>
             
         <div className= 'col-12'>
             <img src ={job.logo} alt={job.company}/>

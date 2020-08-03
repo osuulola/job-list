@@ -4,14 +4,12 @@ import Card from './components/screen/Card'
 import './App.css';
 
 function Home() {
+  console.log(dataList)
   return (
-    <React.Fragment>
-    <nav></nav>
-    <div className= 'container'>
+      <div className= 'container'>
       
       {dataList.default.map(item => <Card job={item} key={item.id}/>)}
      </div>
-     </React.Fragment>
   );
 }
 
